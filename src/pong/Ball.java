@@ -55,13 +55,13 @@ public class Ball {
 			dx = Math.cos(Math.toRadians(angle));
 			dy = Math.sin(Math.toRadians(angle));
 			if (dy > 0)
-				dy*=-1;
+				dy *= -1;
 		} else if (bounds.intersects(boundsEnemy)) {
 			int angle = new Random().nextInt(120 - 45) + 45 + 1;
 			dx = Math.cos(Math.toRadians(angle));
 			dy = Math.sin(Math.toRadians(angle));
 			if (dy < 0)
-				dy*=-1;
+				dy *= -1;
 		}
 
 		x += dx * speed;

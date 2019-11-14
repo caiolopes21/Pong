@@ -4,10 +4,10 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 public class Enemy {
-	
-	public double x,y;
-	public int width,height;
-	
+
+	public double x, y;
+	public int width, height;
+
 	public Enemy(int x, int y) {
 		this.x = x;
 		this.y = y;
@@ -16,15 +16,15 @@ public class Enemy {
 	}
 
 	public void tick() {
-		x+= (Game.ball.x - x - 6) * 0.07;
-		if(x+width > Game.WIDTH) {
+		x += (Game.ball.x - x - 6) * 0.07;
+		if (x + width > Game.WIDTH) {
 			x = Game.WIDTH - width;
 		}
 	}
-	
+
 	public void render(Graphics g) {
 		g.setColor(Color.white);
-		g.fillRect((int)x,(int)y, width, height);
+		g.fillRect((int) x, (int) y, width, height);
 	}
-	
+
 }
